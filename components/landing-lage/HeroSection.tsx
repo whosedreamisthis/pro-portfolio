@@ -37,7 +37,7 @@ const HeroSection = () => {
             className="font-mono"
           />
         </div>
-        <p className="text-sm mb-4 sm:mb-8 text-gray-800 dark:text-gray-200 mx-auto max-w-prose text-center p-4">
+        <p className="text-sm mb-4 sm:mb-8 text-gray-800 dark:text-gray-200 mx-auto max-w-prose text-center p-10">
           Crafting exceptional digital experiences with modern technologies.
           Passionate about building scalable applications and teaching others.
         </p>

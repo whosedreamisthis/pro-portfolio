@@ -1,19 +1,21 @@
 import React from "react";
 import Image from "next/image";
 import { highlights } from "@/data/data";
+import Stats from "@/components/landing-lage/Stats";
 
 const AboutMe = () => {
   return (
-    <div className="my-15 mx-15">
-      <div className="flex flex-col  justify-center items-center mb-7 ">
+    <div className="relative min-h-screen bg-brand-50/30  overflow-hidden pb-10">
+      <div className="flex flex-col  justify-center items-center mb-7 mt-10">
         <p className="text-xl font-bold">
-          About <span className="text-brand-200 dark:text-brand-50">Me</span>
+          About{" "}
+          <span className="text-secondary-300 dark:text-secondary-200">Me</span>
         </p>
         <p className="text-sm text-muted-foreground text-center">
           Get to know the developer behind the code.
         </p>
       </div>
-      <div className="flex flex-col md:flex-row justify-center items-center md:gap-4">
+      <div className="flex flex-col md:flex-row justify-center items-center md:gap-4 mx-5">
         <Image
           src="/images/user.jpg"
           alt="User Profile"
@@ -51,6 +53,7 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
+      <Stats />
     </div>
   );
 };
