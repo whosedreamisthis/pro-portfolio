@@ -6,7 +6,7 @@ import SectionHeader from "@/components/landing-lage/SectionHeader";
 
 const AboutMe = () => {
   return (
-    <section className="relative min-h-screen bg-brand-50/30  overflow-hidden pb-10">
+    <section className="relative  bg-brand-50/30  overflow-hidden ">
       <SectionHeader
         title="About Me"
         description="Get to know the developer behind the code"

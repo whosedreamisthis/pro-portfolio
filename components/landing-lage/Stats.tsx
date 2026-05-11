@@ -3,7 +3,7 @@ import { stats } from "@/data/data";
 
 const Stats = () => {
   return (
-    <div className="mt-10 mx-10">
+    <div className="mx-10 mt-10">
       <div className="grid grid-cols-2 md:grid-cols-4 md:justify-between items-center gap-3">
         {stats.map((stat) => (
           <div

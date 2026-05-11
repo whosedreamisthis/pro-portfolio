@@ -2,6 +2,7 @@ import React from "react";
 import HeroSection from "@/components/landing-lage/HeroSection";
 import AboutMe from "@/components/landing-lage/AboutMe";
 import TechnicalSkills from "@/components/landing-lage/TechnicalSkills";
+import Projects from "@/components/landing-lage/Projects";
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
       <HeroSection />
       <AboutMe />
       <TechnicalSkills />
+      <Projects />
     </div>
   );
 };
