@@ -1,13 +1,34 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Logo from "@/components/helper/Logo";
 import ThemeToggle from "@/components/helper/ThemeToggle";
 import { NAV_LINKS } from "@/constants/constants";
 import Link from "next/link";
 import { Download, MenuIcon } from "lucide-react";
 
-const Nav = () => {
+type Props = {
+  openNav: () => void;
+};
+
+const Nav = ({ openNav }: Props) => {
+  const [navBg, setNavBg] = useState(false);
+
+  useEffect(() => {
+    const handler = () => {
+      if (window.scrollY >= 90) setNavBg(true);
+      if (window.scrollY < 90) setNavBg(false);
+    };
+
+    window.addEventListener("scroll", handler);
+
+    return () => window.removeEventListener("scroll", handler);
+  }, []);
+
   return (
-    <div className="transition-all duration-200 h-[12vh] z-100 fixed w-full">
+    <div
+      className={`${navBg ? "dark:bg-gray-800 bg-white shadow-md" : "fixed"} transition-all duration-200 h-[14vh] z-100 fixed w-full`}
+    >
       <div className="flex items-center h-full justify-between w-[90%] lg:w-[98%] xl:w-[80%] mx-auto">
         <Logo />
         <div className="hidden lg:flex items-center space-x-10">
@@ -32,7 +53,10 @@ const Nav = () => {
             </span>
           </a>
           <ThemeToggle />
-          <MenuIcon className="w-8 h-8 cursor-pointer text-black dark:text-white lg:hidden" />
+          <MenuIcon
+            onClick={openNav}
+            className="w-8 h-8 cursor-pointer text-black dark:text-white lg:hidden"
+          />
         </div>
       </div>
     </div>
