@@ -21,35 +21,35 @@ const ProjectCard = ({ project }) => {
           alt={project.title}
         />
       </div>
-      <CardHeader className="p-2">
+      <CardHeader className="">
         <CardTitle className="font-bold px-2">{project.title}</CardTitle>
         <CardDescription className="text-sm text-muted-foreground mx-2">
           {project.description}
         </CardDescription>
-        <CardContent className="m-0 p-0 my-2">
-          <div className="flex gap-1 flex-row my-4 mx-2">
-            {project.techStack.map((tech) => (
-              <Badge
-                key={tech}
-                className=" rounded-lg px-2 py-3 text-xs bg-secondary-400 text-center "
-              >
-                {tech}
-              </Badge>
-            ))}
-          </div>
-          <div className="flex justify-between items-center mx-auto gap-2">
-            <Button className="mx-2 rounded-md px-6  sm:px-9 ">
-              Live Demo
-            </Button>
-            <Button
-              variant="outline"
-              className="mx-2 rounded-md px-6 sm:px-9   border-brand-400 border"
-            >
-              Source Code
-            </Button>
-          </div>
-        </CardContent>
       </CardHeader>
+      <CardContent className="m-0 p-0">
+        <div className="flex gap-1 flex-row mx-5.5 mb-3">
+          {project.techStack.map((tech) => (
+            <Badge
+              key={tech}
+              className=" rounded-lg px-2 py-3 text-xs bg-secondary-400 text-center "
+            >
+              {tech}
+            </Badge>
+          ))}
+        </div>
+        <div className="flex justify-center items-center  mb-1 mt-4 gap-3">
+          <Button className="rounded-md px-6 dark:text-white dark:bg-brand-100">
+            Live Demo
+          </Button>
+          <Button
+            variant="outline"
+            className="rounded-md px-6   border-brand-400 dark:border-brand-50 border "
+          >
+            Source Code
+          </Button>
+        </div>
+      </CardContent>
     </Card>
   );
 };
