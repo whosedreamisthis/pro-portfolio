@@ -45,7 +45,7 @@ const Nav = ({ openNav }: Props) => {
         <div className="flex items-center space-x-4">
           <a
             href="#"
-            className="box-border relative z-20 inline-flex items-center justify-center w-auto px-6 sm:px-8 lg:p-2 py-3 overflow-hidden font-bold text-white transition-all duration-300 bg-indigo-600 rounded-md cursor-pointer group ring-offset-2 ring-1 ring-indigo-300 ring-offset-indigo-200 hover:ring-offset-indigo-500 ease focus:outline-none"
+            className="box-border relative z-20 inline-flex items-center justify-center w-auto px-6 sm:px-8 lg:p-2 py-3 overflow-hidden font-bold text-white transition-all duration-300 bg-brand-200 rounded-md cursor-pointer group ring-offset-2 ring-1 ring-indigo-300 ring-offset-indigo-200 hover:ring-offset-indigo-500 ease focus:outline-none"
           >
             <span className="relative z-20 flex items-center space-x-2 text-sm">
               <Download className="w-4 h-4" />
