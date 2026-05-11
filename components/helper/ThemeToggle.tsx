@@ -23,12 +23,12 @@ const ThemeToggle = () => {
   return (
     <Button
       onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
-      className="p-2 transition w-10 h-10 cursor-pointer bg-gray-100 dark:bg-gray-800 rounded-lg flex flex-col items-center justify-center"
+      className="p-2 transition w-10 h-10 cursor-pointer bg-white  dark:bg-brand-100 rounded-lg flex flex-col items-center justify-center"
     >
       {currentTheme === "dark" ? (
         <Sun className="text-white w-7 h-7 cursor-pointer" />
       ) : (
-        <Moon className="text-gray-800 w-7 h-7 cursor-pointer" />
+        <Moon className="text-brand-300 w-7 h-7 cursor-pointer" />
       )}
     </Button>
   );

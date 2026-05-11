@@ -55,7 +55,7 @@ const Nav = ({ openNav }: Props) => {
           <ThemeToggle />
           <MenuIcon
             onClick={openNav}
-            className="w-8 h-8 cursor-pointer text-black dark:text-white lg:hidden"
+            className="w-8 h-8 cursor-pointer text-brand-300 dark:text-white  lg:hidden"
           />
         </div>
       </div>

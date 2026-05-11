@@ -1,8 +1,5 @@
-import Home from "@/components/home/Home"
-
+import Home from "../components/landing-lage/Home";
 
 export default function HomePage() {
-  return (
-    <Home />
-  );
+  return <Home />;
 }
