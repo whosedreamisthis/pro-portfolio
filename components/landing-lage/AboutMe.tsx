@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Briefcase, MapPin, Coffee, GraduationCap } from "lucide-react";
+import { highlights } from "@/data/data";
 
 const AboutMe = () => {
   return (
@@ -38,22 +38,12 @@ const AboutMe = () => {
             </p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-2 gap-2 ">
-            <div className="flex gap-2 items-center">
-              <MapPin className="w-6 h-6 hidden sm:flex" />
-              <p className="text-xs">Based in Vancouver,BC</p>
-            </div>
-            <div className="flex gap-2 items-center">
-              <Briefcase className="w-6 h-6 hidden sm:flex" />
-              <p className="text-xs">Open for freelance work</p>
-            </div>
-            <div className="flex gap-2 items-center">
-              <GraduationCap className="w-6 h-6 hidden sm:flex" />
-              <p className="text-xs">CS Graduate from UBC</p>
-            </div>
-            <div className="flex gap-2 items-center">
-              <Coffee className="w-6 h-6 hidden sm:flex" />
-              <p className="text-xs">Powered by coffee and curiosity</p>
-            </div>
+            {highlights.map((highlight) => (
+              <div key={highlight.text} className="flex gap-2 items-center">
+                <highlight.icon className="w-6 h-6 hidden sm:flex" />
+                <p className="text-xs">{highlight.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
