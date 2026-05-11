@@ -9,18 +9,18 @@ const AboutMe = () => {
         <p className="text-xl font-bold">
           About <span className="text-brand-200 dark:text-brand-50">Me</span>
         </p>
-        <p className="text-sm text-muted-foreground">
+        <p className="text-sm text-muted-foreground text-center">
           Get to know the developer behind the code.
         </p>
       </div>
-      <div className="flex flex-col md:flex-row justify-center items-center">
+      <div className="flex flex-col md:flex-row justify-center items-center md:gap-4">
         <Image
           src="/images/user.jpg"
           alt="User Profile"
           width={300}
           height={300}
         />
-        <div className="space-y-4 flex flex-col mx-10 mt-5">
+        <div className="space-y-4 flex flex-col mt-5">
           <h1 className="text-lg font-semibold text-center">
             A passionate developer who loves to create
           </h1>
@@ -37,10 +37,14 @@ const AboutMe = () => {
               laborum magni
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-2 gap-2 ">
+          <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 ">
             {highlights.map((highlight) => (
-              <div key={highlight.text} className="flex gap-2 items-center">
+              <div
+                key={highlight.text}
+                className="flex gap-2 items-center justify-start"
+              >
                 <highlight.icon className="w-6 h-6 hidden sm:flex" />
+
                 <p className="text-xs">{highlight.text}</p>
               </div>
             ))}
