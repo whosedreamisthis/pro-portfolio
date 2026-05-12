@@ -19,9 +19,9 @@ const Contact = () => {
             opportunities to be part of your vision.
           </p>
           {contactInfo.map((contact) => (
-            <div key={contact.label}>
+            <a key={contact.label} href={contact.href} target="_blank">
               <ContactCard {...contact} />
-            </div>
+            </a>
           ))}
         </div>
         <ContactForm />

@@ -12,6 +12,7 @@ import { contactSchema } from "@/lib/schema";
 import { z } from "zod";
 import { sendEmail } from "@/lib/actions";
 import { toast } from "sonner";
+import { Send } from "lucide-react";
 
 const ContactForm = () => {
   const {
@@ -104,7 +105,13 @@ const ContactForm = () => {
           )}
         </div>
         <div className="flex justify-end">
-          <Button type="submit">Submit</Button>
+          <Button
+            type="submit"
+            className="cursor-pointer flex justify-center items-center gap-4 py-4 w-full rounded-sm"
+          >
+            <Send />
+            <p>Send</p>
+          </Button>
         </div>
       </div>
     </form>

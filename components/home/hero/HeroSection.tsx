@@ -7,7 +7,7 @@ import { FolderOpen, Download } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen bg-brand-radial flex items-center justify-center overflow-hidden mt-10">
+    <section className="relative min-h-screen bg-brand-radial flex items-center justify-center overflow-hidden">
       <div className="relative z-10 text-center">
         <div className="sm:mb-6 ">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-primary  bg-white dark:bg-gray-600 text-sm text-muted-foreground dark:text-gray-200 mb-8">

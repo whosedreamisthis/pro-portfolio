@@ -9,21 +9,17 @@ type ContactInfo = {
   href: string;
 };
 
-const ContactCard = ({ icon: Icon, label, value, href }: ContactInfo) => {
+const ContactCard = ({ icon: Icon, label, value }: ContactInfo) => {
   return (
-    <Card>
+    <Card className="hover:scale-105 transition-transform duration-300">
       <CardContent>
         <div className="flex gap-4 items-center justify-start">
-          <Icon />
+          <div className="bg-brand-50/40 h-8 w-8 rounded-md flex items-center justify-center">
+            <Icon size={14} />
+          </div>
           <div className="flex flex-col gap-1">
             <p className="text-muted-foreground">{label}</p>
-            {href.includes("mailto") ? (
-              <a href="mailto:whosedreamisthis@gmail.com">
-                <p className="font-bold">{value}</p>
-              </a>
-            ) : (
-              <p className="font-bold">{value}</p>
-            )}
+            <p className="font-bold">{value}</p>
           </div>
         </div>
       </CardContent>
