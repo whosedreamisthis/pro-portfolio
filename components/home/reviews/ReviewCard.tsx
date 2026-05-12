@@ -16,6 +16,7 @@ type ReviewCardProps = {
   userImage: string;
   review: string;
   profession: string;
+  rating: number;
 };
 
 const ReviewCard = ({
@@ -23,14 +24,18 @@ const ReviewCard = ({
   profession,
   userImage,
   review,
+  rating,
 }: ReviewCardProps) => {
   return (
     <Card className="flex-1 relative">
       <Quote className="absolute top-2 right-2 text-muted-foreground" />
       <CardHeader>
-        <CardTitle className="flex gap-1">
+        <CardTitle className="flex justify-start items-center gap-1">
           {[1, 2, 3, 4, 5].map((star) => (
-            <StarIcon key={star} className="h-4 w-4 text-yellow-500" />
+            <StarIcon
+              key={star}
+              className={`h-4 w-4 text-yellow-500 ${star <= rating ? "fill-yellow-500" : ""} `}
+            />
           ))}
         </CardTitle>
       </CardHeader>

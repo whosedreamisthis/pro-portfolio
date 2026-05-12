@@ -41,6 +41,7 @@ export const userReviewData = [
     name: "John Doe",
     profession: "Real Estate Agent",
     userImage: "/images/u1.jpg",
+    rating: 3,
     review:
       "A wonderful experience! The platform made it easy to find exactly what I needed. lorem ipsum dolor sit ame",
   },
@@ -49,6 +50,7 @@ export const userReviewData = [
     name: "Mike Smith",
     profession: "Business Owner",
     userImage: "/images/u2.jpg",
+    rating: 5,
     review:
       "Great selection of properties and seamless process. Highly recommended for anyone looking to invest.",
   },
@@ -57,6 +59,7 @@ export const userReviewData = [
     name: "Alex Johnson",
     profession: "Web developer",
     userImage: "/images/u3.jpg",
+    rating: 1,
     review:
       "The website helped me find my dream home quickly and hassle-free. Exceptional service!",
   },
@@ -65,6 +68,7 @@ export const userReviewData = [
     name: "Emily Clark",
     profession: "Interior Designer",
     userImage: "/images/u4.jpg",
+    rating: 4,
     review:
       "Fantastic range of properties with clear details. The best platform for home and design inspiration!",
   },
