@@ -13,12 +13,19 @@ const AboutMe = () => {
       />
       <div className="flex flex-col md:flex-row justify-center items-center md:gap-4 mx-5">
         <Image
+          data-aos="fade-right"
+          data-aos-anchor-placement="top-center"
           src="/images/user.jpg"
           alt="User Profile"
           width={300}
           height={300}
         />
-        <div className="space-y-4 flex flex-col mt-5">
+        <div
+          data-aos="fade-left"
+          data-aos-delay="200"
+          data-aos-anchor-placement="top-center"
+          className="space-y-4 flex flex-col mt-5"
+        >
           <h1 className="text-lg font-semibold text-center">
             A passionate developer who loves to create
           </h1>

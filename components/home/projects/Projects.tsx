@@ -13,7 +13,14 @@ const Projects = () => {
       <div className="mb-10">
         <div className="w-[90%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto space-y-4">
           {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
+            <div
+              key={index}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+              data-aos-anchor-placement="top-center"
+            >
+              <ProjectCard {...project} />
+            </div>
           ))}
         </div>
       </div>

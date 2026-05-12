@@ -19,6 +19,9 @@ const Experience = () => {
         <div className="flex flex-col gap-12">
           {experiences.map((experience, index) => (
             <div
+              data-aos="zoom-in"
+              data-aos-delay={index * 100}
+              data-aos-anchor-placement="top-center"
               key={index}
               className="relative w-full min-h-37.5 flex items-start md:items-center"
             >

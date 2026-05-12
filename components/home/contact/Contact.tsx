@@ -11,7 +11,11 @@ const Contact = () => {
         title="Get In Touch"
         description="Have a project in mind or just want to say hi? I'd love to hear from you"
       />
-      <div className="flex flex-col sm:flex-row gap-4 w-full justify-center items-start">
+      <div
+        data-aos="fade-right"
+        data-aos-anchor-placement="top-center"
+        className="flex flex-col sm:flex-row gap-4 w-full justify-center items-start"
+      >
         <div className="flex flex-col gap-2">
           <h1 className="font-semibold">Let&apos;s talk</h1>
           <p className="text-sm text-muted-foreground mb-3">
@@ -24,7 +28,13 @@ const Contact = () => {
             </a>
           ))}
         </div>
-        <ContactForm />
+        <div
+          data-aos="fade-left"
+          data-aos-delay="100"
+          data-aos-anchor-placement="top-center"
+        >
+          <ContactForm />
+        </div>
       </div>
     </section>
   );

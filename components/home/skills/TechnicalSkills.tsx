@@ -10,8 +10,10 @@ const TechnicalSkills = () => {
         title="Technical Skills"
         description="echnologies I've been working with recently"
       />
-      {skillCategories.map((category) => (
-        <CategorySkills key={category.title} category={category} />
+      {skillCategories.map((category, index) => (
+        <div key={index}>
+          <CategorySkills category={category} />
+        </div>
       ))}
     </section>
   );

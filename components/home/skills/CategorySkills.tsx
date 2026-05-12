@@ -19,8 +19,11 @@ const CategorySkills = ({ category }: Props) => {
       </div>
       <div className=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6  justify-center gap-4 w-fit mx-auto">
         {category.skills.map(
-          ({ name, icon: Icon }: { name: string; icon: LucideIcon }) => (
+          ({ name, icon: Icon }: { name: string; icon: LucideIcon }, index) => (
             <div
+              data-aos="zoom-in"
+              data-aos-delay={index * 100}
+              data-aos-anchor-placement="top-center"
               key={name}
               className="flex flex-col gap-1 justify-center items-center my-4 bg-white dark:bg-brand-100/30 rounded-md h-24 w-30 sm:w-40 px-4"
             >

@@ -7,6 +7,9 @@ const Stats = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 md:justify-between items-center gap-3">
         {stats.map((stat) => (
           <div
+            data-aos="zoom-in"
+            data-aos-delay="0"
+            data-aos-anchor-placement="top-center"
             key={stat.label}
             className="flex flex-col justify-center items-center bg-white/70 dark:bg-brand-100/70 dark:text-white py-6 rounded-md"
           >
