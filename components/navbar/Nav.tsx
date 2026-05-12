@@ -44,7 +44,8 @@ const Nav = ({ openNav }: Props) => {
         </div>
         <div className="flex items-center space-x-4">
           <a
-            href="#"
+            href="/myCV.pdf" // Path to your file in the /public folder
+            download="Dana_Sharon_CV.pdf" // The name the user will see when saving
             className="box-border relative z-20 inline-flex items-center justify-center w-auto px-6 sm:px-8 lg:p-2 py-3 overflow-hidden font-bold text-white transition-all duration-300 bg-brand-200 rounded-md cursor-pointer group ring-offset-2 ring-1 ring-indigo-300 ring-offset-indigo-200 hover:ring-offset-indigo-500 ease focus:outline-none"
           >
             <span className="relative z-20 flex items-center space-x-2 text-sm">

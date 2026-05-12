@@ -9,7 +9,7 @@ type ContactInfo = {
   href: string;
 };
 
-const ContactCard = ({ icon: Icon, label, value }: ContactInfo) => {
+const ContactCard = ({ icon: Icon, label, value, href }: ContactInfo) => {
   return (
     <Card>
       <CardContent>
@@ -17,7 +17,13 @@ const ContactCard = ({ icon: Icon, label, value }: ContactInfo) => {
           <Icon />
           <div className="flex flex-col gap-1">
             <p className="text-muted-foreground">{label}</p>
-            <p className="font-bold">{value}</p>
+            {href.includes("mailto") ? (
+              <a href="mailto:whosedreamisthis@gmail.com">
+                <p className="font-bold">{value}</p>
+              </a>
+            ) : (
+              <p className="font-bold">{value}</p>
+            )}
           </div>
         </div>
       </CardContent>

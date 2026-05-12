@@ -7,7 +7,7 @@ import { FolderOpen, Download } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <div className="relative min-h-screen bg-brand-radial flex items-center justify-center overflow-hidden dark:">
+    <section className="relative min-h-screen bg-brand-radial flex items-center justify-center overflow-hidden mt-10">
       <div className="relative z-10 text-center">
         <div className="sm:mb-6 ">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-primary  bg-white dark:bg-gray-600 text-sm text-muted-foreground dark:text-gray-200 mb-8">
@@ -18,7 +18,7 @@ const HeroSection = () => {
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-2">
           Hi, I&apos;m{" "}
           <span className="text-secondary-100 dark:text-secondary-200">
-            Jane Doe
+            Dana Sharon
           </span>
         </h1>
         <div className="text-xl sm:text-2xl md:text-3xl text-black dark:text-white font-semibold sm:mb-6 h-12">
@@ -46,13 +46,19 @@ const HeroSection = () => {
             <FolderOpen />
             View Projects
           </Button>
-          <Button className="cursor-pointer p-4 bg-slate-800 dark:bg-slate-200">
-            <Download />
-            Download CV
-          </Button>
+          <a
+            href="/myCV.pdf" // Path to your file in the /public folder
+            download="Dana_Sharon_CV.pdf" // The name the user will see when saving
+            className="box-border relative z-20 inline-flex items-center justify-center w-auto px-6 sm:px-8 lg:p-2 py-3 overflow-hidden font-bold text-white transition-all duration-300 bg-brand-200 rounded-md cursor-pointer group ring-offset-2 ring-1 ring-indigo-300 ring-offset-indigo-200 hover:ring-offset-indigo-500 ease focus:outline-none"
+          >
+            <span className="relative z-20 flex items-center space-x-2 text-sm">
+              <Download className="w-4 h-4" />
+              <span>Download CV</span>
+            </span>
+          </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -78,19 +78,19 @@ export const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@johndoe.dev",
-    href: "mailto:hello@johndoe.dev",
+    value: "whosedreamisthis@gmail.com",
+    href: "mailto:whosedreamisthis@gmail.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
+    value: "(778) 318-7949",
+    href: "tel:+17783187949",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "San Francisco, CA",
+    value: "Nanaimo, BC",
     href: "#",
   },
 ];

@@ -29,9 +29,5 @@ const Contact = () => {
     </section>
   );
 };
-// icon: Mail,
-//   label: "Email",
-//   value: "hello@johndoe.dev",
-//   href: "mailto:hello@johndoe.dev"
 
 export default Contact;
