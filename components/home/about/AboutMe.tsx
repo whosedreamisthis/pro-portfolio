@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import { highlights } from "@/data/data";
-import Stats from "@/components/landing-lage/Stats";
-import SectionHeader from "@/components/landing-lage/SectionHeader";
+import Stats from "./Stats";
+import SectionHeader from "../SectionHeader";
 
 const AboutMe = () => {
   return (

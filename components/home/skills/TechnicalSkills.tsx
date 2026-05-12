@@ -1,5 +1,5 @@
 import React from "react";
-import SectionHeader from "@/components/landing-lage/SectionHeader";
+import SectionHeader from "../SectionHeader";
 import { skillCategories } from "@/data/data";
 import CategorySkills from "./CategorySkills";
 

@@ -1,6 +1,6 @@
 import React from "react";
-import SectionHeader from "@/components/landing-lage/SectionHeader";
-import ProjectCard from "@/components/landing-lage/ProjectCard";
+import SectionHeader from "../SectionHeader";
+import ProjectCard from "./ProjectCard";
 import { projects } from "@/data/data";
 
 const Projects = () => {
