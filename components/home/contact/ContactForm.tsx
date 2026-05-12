@@ -47,7 +47,7 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="bg-white rounded-lg px-6 py-8 w-full"
+      className="bg-white dark:bg-black rounded-lg px-6 py-8 w-full"
     >
       <div className="flex flex-col gap-4 ">
         <div className="flex gap-2">
@@ -56,7 +56,7 @@ const ContactForm = () => {
             <Input
               {...register("name")}
               placeholder="John Smith"
-              className="bg-gray-300/40 rounded-sm"
+              className="bg-gray-300/40 rounded-sm border-brand-50"
             />
             {errors.name && (
               <span className="text-xs text-red-500">
@@ -69,7 +69,7 @@ const ContactForm = () => {
             <Input
               {...register("email")}
               placeholder="john@example.com"
-              className="bg-gray-300/40 rounded-sm"
+              className="bg-gray-300/40 rounded-sm border-brand-50"
             />
             {errors.email && (
               <span className="text-xs text-red-500">
@@ -82,7 +82,7 @@ const ContactForm = () => {
           <Label className="text-sm font-medium">Subject</Label>
           <Input
             {...register("subject")}
-            className="bg-gray-300/40 rounded-sm"
+            className="bg-gray-300/40 rounded-sm border-brand-50"
             placeholder="Project inquiry"
           />
           {errors.subject && (
@@ -95,7 +95,7 @@ const ContactForm = () => {
           <Label className="text-sm font-medium">Message</Label>
           <Textarea
             {...register("message")}
-            className="bg-gray-300/40 rounded-sm min-h-30"
+            className="bg-gray-300/40 rounded-sm min-h-30 border-brand-50"
             placeholder="Tell me about your project..."
           />
           {errors.message && (
