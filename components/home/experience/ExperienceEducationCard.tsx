@@ -9,9 +9,8 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-type ExperienceEducationCardProps = {
+type Props = {
   title: string;
-  type: string;
   company: string;
   period: string;
   description: string;
@@ -26,28 +25,43 @@ const ExperienceEducationCard = ({
   description,
   technologies,
   index,
-}: ExperienceEducationCardProps) => {
+}: Props) => {
+  // Mobile: Always right of line
+  // Desktop: Alternate sides
+  const sideClasses =
+    index % 2 === 0
+      ? "md:left-auto md:right-[calc(50%+2rem)]"
+      : "md:left-[calc(50%+2rem)]";
+
   return (
     <Card
-      className={`absolute ${index % 2 === 0 ? "left-12" : "right-12"} top-0 w-[40%]`}
+      className={`relative ml-12 md:ml-0 md:absolute md:w-[42%] shadow-md ${sideClasses} top-0`}
     >
-      <CardHeader>
-        <p className="bg-secondary-200/40 py-1 w-fit px-4 rounded-full text-sm">
+      <CardHeader className="pb-2">
+        <p className="bg-secondary-200/40 py-1 w-fit px-3 rounded-full text-[10px] font-medium uppercase tracking-wider">
           {period}
         </p>
-        <CardTitle className="font-bold text-lg">{title}</CardTitle>
-        <p className="text-xs text-muted-foreground">{company}</p>
+        <CardTitle className="font-bold text-lg leading-tight">
+          {title}
+        </CardTitle>
+        <p className="text-sm font-medium text-brand-600 dark:text-brand-400">
+          {company}
+        </p>
       </CardHeader>
       <CardContent>
-        <CardDescription className="text-sm text-black dark:text-white">
+        <CardDescription className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
           {description}
         </CardDescription>
       </CardContent>
-      <CardFooter className="border-transparent">
-        <div className="flex flex-wrap gap-2 ">
-          {technologies.map((technology) => (
-            <Badge key={technology} className="text-xs text-white ">
-              {technology}
+      <CardFooter>
+        <div className="flex flex-wrap gap-1.5">
+          {technologies.map((tech) => (
+            <Badge
+              key={tech}
+              variant="secondary"
+              className="text-[10px] px-2 py-0 bg-brand-100/20 dark:bg-brand-50/50"
+            >
+              {tech}
             </Badge>
           ))}
         </div>
