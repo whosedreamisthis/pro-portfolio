@@ -6,7 +6,7 @@ import ExperienceEducationCard from "@/components/home/experience/ExperienceEduc
 
 const Experience = () => {
   return (
-    <section className="relative bg-brand-50/30 overflow-hidden pb-20">
+    <section className="relative bg-brand-50/30 overflow-hidden pb-30">
       <SectionHeader
         title="Experience & Education"
         description="My professional journey and academic background"
