@@ -47,7 +47,7 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="bg-white dark:bg-black rounded-lg px-6 py-8 w-full"
+      className="bg-white dark:bg-slate-900/70 rounded-lg px-6 py-8 w-full"
     >
       <div className="flex flex-col gap-4 ">
         <div className="flex gap-2">

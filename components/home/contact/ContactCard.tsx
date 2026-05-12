@@ -11,7 +11,7 @@ type ContactInfo = {
 
 const ContactCard = ({ icon: Icon, label, value }: ContactInfo) => {
   return (
-    <Card className="hover:scale-105 transition-transform duration-300">
+    <Card className="hover:scale-105 transition-transform duration-300 dark:bg-slate-900/70">
       <CardContent>
         <div className="flex gap-4 items-center justify-start">
           <div className="bg-brand-50/40 h-8 w-8 rounded-md flex items-center justify-center">
