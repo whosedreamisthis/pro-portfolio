@@ -6,7 +6,7 @@ import ContactForm from "@/components/home/contact/ContactForm";
 
 const Contact = () => {
   return (
-    <section className="relative  bg-brand-50/30  overflow-hidden px-5 ">
+    <section className="relative  bg-brand-50/30  overflow-hidden px-5 pb-15">
       <SectionHeader
         title="Get In Touch"
         description="Have a project in mind or just want to say hi? I'd love to hear from you"
