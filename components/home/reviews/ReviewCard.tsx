@@ -35,7 +35,7 @@ const ReviewCard = ({
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <CardDescription className="text-sm text-black dark:text-white">
+        <CardDescription className="line-clamp-4 text-black dark:text-white">
           {review}
         </CardDescription>
       </CardContent>
