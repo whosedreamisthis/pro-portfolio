@@ -34,7 +34,7 @@ const ProjectCard = ({
       <div className="relative w-full h-48">
         <Image src={image} fill className="object-cover" alt={title} />
       </div>
-      <CardHeader className="">
+      <CardHeader className="flex-1">
         <CardTitle className="font-bold px-2">{title}</CardTitle>
         <CardDescription className="text-sm text-muted-foreground mx-2 line-clamp-2">
           {description}
