@@ -51,22 +51,22 @@ const ProjectCard = ({
             </Badge>
           ))}
         </div>
-        <div className="flex justify-center items-center  mb-5 mt-4 gap-3 w-full">
+        <div className="flex justify-center items-center  mb-5 mt-4 mx-5 gap-2">
           {demoUrl && (
             <Button
-              className="rounded-md px-6 dark:text-white dark:bg-brand-100 cursor-pointer w-[43%]"
+              className="flex-1 rounded-md px-6 dark:text-white dark:bg-brand-100 cursor-pointer"
               onClick={() => {
                 window.open(demoUrl, "_blank");
               }}
             >
-              Live Demo{" "}
+              Live Demo
             </Button>
           )}
 
           {githubUrl && (
             <Button
               variant="outline"
-              className="rounded-md px-6   border-brand-400 dark:border-brand-50 border cursor-pointer w-[43%]"
+              className="flex-1  rounded-md px-6   border-brand-400 dark:border-brand-50 border cursor-pointer"
               onClick={() => window.open(githubUrl, "_blank")}
             >
               Source Code
