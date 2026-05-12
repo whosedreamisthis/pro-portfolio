@@ -27,7 +27,7 @@ const responsive = {
 
 const Reviews = () => {
   return (
-    <section className="relative bg-brand-50/30  overflow-hidden pb-20 px-10">
+    <section className="relative bg-brand-50/30  overflow-hidden pb-20 px-1">
       <SectionHeader
         title="Our Client Review"
         description="Check out our client reviews"

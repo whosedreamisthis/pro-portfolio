@@ -27,7 +27,7 @@ const ReviewCard = ({
   rating,
 }: ReviewCardProps) => {
   return (
-    <Card className="flex-1 relative">
+    <Card className="flex-1 relative flex flex-col h-full">
       <Quote className="absolute top-2 right-2 text-muted-foreground" />
       <CardHeader>
         <CardTitle className="flex justify-start items-center gap-1">
@@ -44,7 +44,7 @@ const ReviewCard = ({
           {review}
         </CardDescription>
       </CardContent>
-      <CardFooter>
+      <CardFooter className="border-transparent">
         <div className="flex gap-2 justify-start items-center">
           <Image
             src={userImage}
