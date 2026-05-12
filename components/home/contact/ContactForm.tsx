@@ -10,11 +10,14 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { contactSchema } from "@/lib/schema";
 import { z } from "zod";
+import { sendEmail } from "@/lib/actions";
+import { toast } from "sonner";
 
 const ContactForm = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<z.infer<typeof contactSchema>>({
     resolver: zodResolver(contactSchema),
@@ -25,8 +28,26 @@ const ContactForm = () => {
       message: "",
     },
   });
+
+  const onSubmit = async (data: z.infer<typeof contactSchema>) => {
+    await sendEmail(data);
+    reset();
+    toast.success("Your email has been sent. I will get back to you shortly.", {
+      style: {
+        color: "green",
+      },
+      action: {
+        label: "Go Home",
+        onClick: () => window.scrollTo({ top: 0, behavior: "smooth" }),
+      },
+    });
+  };
+
   return (
-    <form className="bg-white rounded-lg px-6 py-8 w-full">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="bg-white rounded-lg px-6 py-8 w-full"
+    >
       <div className="flex flex-col gap-4 ">
         <div className="flex gap-2">
           <div className="flex flex-col gap-1">
