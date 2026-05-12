@@ -41,7 +41,7 @@ const ProjectCard = ({
         </CardDescription>
       </CardHeader>
       <CardContent className="m-0 p-0">
-        <div className="flex gap-1 flex-row mx-5.5 mb-3">
+        <div className="flex gap-1 flex-row mx-5.5 mb-3 flex-wrap">
           {techStack.map((tech) => (
             <Badge
               key={tech}
