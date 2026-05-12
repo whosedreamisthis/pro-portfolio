@@ -19,7 +19,7 @@ const ContactCard = ({ icon: Icon, label, value }: ContactInfo) => {
           </div>
           <div className="flex flex-col gap-1">
             <p className="text-muted-foreground">{label}</p>
-            <p className="font-bold">{value}</p>
+            <p className="font-semibold">{value}</p>
           </div>
         </div>
       </CardContent>
