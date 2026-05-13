@@ -6,7 +6,10 @@ import SectionHeader from "../SectionHeader";
 
 const AboutMe = () => {
   return (
-    <section className="relative  bg-brand-50/30  overflow-hidden ">
+    <section
+      id="about"
+      className="relative  bg-brand-50/30  overflow-hidden scroll-mt-[14vh]"
+    >
       <SectionHeader
         title="About Me"
         description="Get to know the developer behind the code"

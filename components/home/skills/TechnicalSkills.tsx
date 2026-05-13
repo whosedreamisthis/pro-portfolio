@@ -5,7 +5,10 @@ import CategorySkills from "./CategorySkills";
 
 const TechnicalSkills = () => {
   return (
-    <section className="relative bg-brand-50/30  overflow-hidden">
+    <section
+      id="skills"
+      className="relative bg-brand-50/30  overflow-hidden scroll-mt-[14vh]"
+    >
       <SectionHeader
         title="Technical Skills"
         description="echnologies I've been working with recently"

@@ -5,7 +5,10 @@ import { projects } from "@/data/data";
 
 const Projects = () => {
   return (
-    <section className="relative bg-brand-50/30  overflow-hidden">
+    <section
+      id="projects"
+      className="relative bg-brand-50/30  overflow-hidden scroll-mt-[14vh]"
+    >
       <SectionHeader
         title="Featured Projects"
         description="A selection of my recent work and side projects"
