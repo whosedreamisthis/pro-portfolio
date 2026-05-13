@@ -6,6 +6,7 @@ import ResponsiveNav from "@/components/navbar/ResponsiveNav";
 import { Toaster } from "@/components/ui/sonner";
 import React from "react";
 import Footer from "@/components/home/footer/Footer";
+import { AOSInit } from "@/components/helper/AOSInit";
 import ScrollToTop from "@/components/helper/ScrollToTop";
 
 const font = Inter({
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Provider>
           <ResponsiveNav />
+          <AOSInit />
           {children}
           <Footer />
           <ScrollToTop />
